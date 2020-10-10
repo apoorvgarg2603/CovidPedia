@@ -1,15 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% number.forEach( ele=> { %>
-        <h1><%= ele.title %></h1>
-        <!-- <img src="<%= ele.image %>" alt="sorry" width="500" height="600">  -->
-        <a href="<%= ele.newslink %>">link</a>
-   <% }) %>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="COV.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>">
+      <script src="Aware.js"></script>">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <head>   
+<body  >
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="LOGO.png" alt="Logo" style="width:80px;">
+  </a>
+ <a class="navbar-brand" href="#">CovidPedia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mythbusters</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Case Count</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Vaccine Info</a>
+          </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="text-center">
+    
+    <div class="jumbotron">
+        
+      <h1 class="display-2 font-weight-bold" >CovidPedia</h1>
+  </div>
+      <p class="font-weight-bolder font-size:100px"><b>The perfect answer to all your covid related questions</b></p>
+      
+    
+  </div>
+
+  <h2 class="aware display-6 font-weight-bold text-center bg-dark aware-light text-muted ">AWARENESS</h2>
+<!-- The grid: four columns -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 ccol-sm-12 col-md-6 col-lg-4">
+      <div class="stability">
+        <img src="PostrerEnglishtraveller_page-0001.png" alt="Nature" onclick="myFunction(this);">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="stability">
+        <img src="ProtectivemeasuresEng_page-0001.png" alt="Snow" onclick="myFunction(this);">
+    </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="stability">
+        <img src="FINAL_14_03_2020_ENg_page-0001.png" alt="Mountains" onclick="myFunction(this);">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="stability">
+        <img src="socialdistancingEnglish_page-0001.png" alt="Lights" onclick="myFunction(this);">
+      </div>
+    </div>
+  </div> 
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+
+<!--Sliding images-->
+<h2 class="aware display-6 font-weight-bold text-center bg-dark text-muted ">Mythbusters</h2>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="sign2.jpeg" style="width: 300px; height:300px" >
+  <img class="mySlides" src="sign.jpeg" style="width:300px height:300px">
+  <img class="mySlides" src="profile photo.jpeg" style="width:300px height:300px">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+  
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+  </script>
+
+<div class="container1">
+  <div class="row1">
+    <div class="col">
+     <h3> Symptoms:</h3>
+      fskfnrnrordirf
+      vdfbdfb
+      bbdf
+      bdfb
+      gfbgfb
+      gfbfgb
+    </div>
+    
+  </div>
+  <div class="row1">
+    <div class="col1">
+      <h3> Precautions:</h3>
+      fgregrgdrfgdd
+      vrfvfv
+      fvfbfb
+
+    </div>
+    <div class="col2" >
+      <h3> Preventions:</h3>
+     ddrfbvdftbbtldflvdfvfvfvfvf
+     fvfvfbdfb
+    </div>
+  
+  </div>
+</div>
 </body>
-</html> 
+</html>
