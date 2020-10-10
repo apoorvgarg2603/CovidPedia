@@ -9,12 +9,12 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>">
       <script src="Aware.js"></script>">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <head>   
-<body  >
+    </head>  
+<body >
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="#">
-    <img src="LOGO.png" alt="Logo" style="width:80px;">
+    <img src="./LOGO.PNG" alt="Logo" style="width:80px;">
   </a>
  <a class="navbar-brand" href="#">CovidPedia</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
           <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mythbusters</a>
+          <a class="nav-link" href="/mythbusters">Mythbusters</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">News</a>
@@ -100,22 +100,31 @@
 <!--Sliding images-->
 <h2 class="aware display-6 font-weight-bold text-center bg-dark text-muted ">Mythbusters</h2>
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="sign2.jpeg" style="width: 300px; height:300px" >
-  <img class="mySlides" src="sign.jpeg" style="width:300px height:300px">
-  <img class="mySlides" src="profile photo.jpeg" style="width:300px height:300px">
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <div style="height: 210px; overflow: auto;">
+     <% myth.forEach(ele=>{ %>
+      <div class="card d-inline" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"> <%= ele.heading %></h5>
+          <p class="card-text"> <%= ele.content %></p>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  </div>
+  
 </div>
 
   
 
 <script>
-  var slideIndex = 1;
+  /* var slideIndex = 1;
   showDivs(slideIndex);
   
   function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
+    showDivs(slideIndex += n); 
+  }*/
+  
+  
   
   function showDivs(n) {
     var i;
@@ -132,14 +141,8 @@
 <div class="container1">
   <div class="row1">
     <div class="col">
-     <h3> Symptoms:</h3>
-      fskfnrnrordirf
-      vdfbdfb
-      bbdf
-      bdfb
-      gfbgfb
-      gfbfgb
-    </div>
+     <h2> Symptoms:</h2>
+     </div>
     
   </div>
   <div class="row1">
@@ -151,9 +154,14 @@
 
     </div>
     <div class="col2" >
-      <h3> Preventions:</h3>
-     ddrfbvdftbbtldflvdfvfvfvfvf
-     fvfvfbdfb
+      <h2> Preventions:</h2>
+      <% prevent.forEach(ele=>{ %>
+        <div class="card d-inline" style="width: 18rem;">
+          <div class="card-body">
+            <p class="card-text"> <%=ele%></p>
+          </div>
+        </div>
+      <% }) %>
     </div>
   
   </div>

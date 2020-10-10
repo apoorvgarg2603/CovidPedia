@@ -6,6 +6,7 @@ var express =   require('express'),
     request =   require('request');
 
 var app = express();
+app.use(express.static(__dirname + "/public"));
 app.set('view engine', 'ejs');
 
 /*
@@ -61,8 +62,8 @@ function ScrapNumbers() {
                ls.push(num)
            })
            // console.log(ls)
-           for (var i = 0; i < ls.length; i += 4) {
-               numbers.push({ statename: ls[i], confirmed: ls[i + 1], recovery: ls[i + 2], death: ls[i + 3] });
+           for (var i = 0; i < ls.length-4; i += 4) {
+               numbers.push({ statename: ls[i], confirmed: ls[i + 1], recovered: ls[i + 2], death: ls[i + 3] });
            }
        }
    })
@@ -160,17 +161,6 @@ function mythScrapping(){
     });
 }
 
-
-/*
-    Symptoms : -- Get All
-*/
-
-
-/*
-    Routes
-*/
-
-
 // home route
 app.get('/error', function(request, response){
     response.render("error");
@@ -179,12 +169,26 @@ app.get('/error', function(request, response){
 
 ScrapNumbers()
 preventionScrapping()
-ScrapNews()
 vaccineScrapping()
 mythScrapping()
 
 app.get('/', function(request, response){
-     response.render("CovidPedia", {number : news});
+    //console.log(myths);
+     response.render("CovidPedia", {news : news, myth : myths, prevent : preventions});
+});
+app.get('/mythbusters', function(request, response){
+    response.render("mythbuster", {myth : myths});
+});
+app.get('/numbers', function(request, response){
+    response.render("numbers", {num : numbers});
+});
+
+app.get('/prevention', function(request, response){
+    response.render("preventions", {prevent : preventions});
+});
+ScrapNews()
+app.get('/news', function(request, response){
+    response.render("news", {news : news});
 });
 
 app.listen(3000);

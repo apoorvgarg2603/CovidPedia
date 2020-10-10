@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>CP:MythBuster</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="jumbotron">
+                <div class="container">
+                    <h3>MythBusters</h3>
+                    <p>Get Your Facts Straight</p>
+                    <a class="btn btn-primary btn-sm" href="/">Home</a>
+                </div>
+            </header>
+    
+            <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+                <% myth.forEach(function(mythbust){ %>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                            <h5 class="card-title"><%= mythbust.heading %></h5>
+                            <p class="card-text"><%= mythbust.content %></p>
+                            </div>
+                        </div>
+                    </div>
+                <%});%>
+            </div>
+        </div>
+    </body>
+</html>

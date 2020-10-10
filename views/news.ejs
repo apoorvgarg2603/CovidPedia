@@ -1,0 +1,21 @@
+<div class="ui main text container">
+    <div class="ui hude header">CP:News</div>
+    <div class="iu top attached segment">
+        <div class="ui divided items">
+            <% news.forEach(function(news){ %>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%=news.image%>" alt="Sorry Image Not Found">
+                    </div>
+                    <div class="content">
+                        <a href="<%=news.newslink%>"><%=news.title %></a>
+                        <div class="meta">
+                            <span><%= news.date%></span>
+                        </div>
+                    </div>
+                </div>
+                
+            <%});%>
+        </div>
+    </div>
+</div> 
