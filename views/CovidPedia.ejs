@@ -1,170 +1,88 @@
 <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="COV.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>">
-      <script src="Aware.js"></script>">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    </head>  
-<body >
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">
-    <img src="./LOGO.PNG" alt="Logo" style="width:80px;">
-  </a>
- <a class="navbar-brand" href="#">CovidPedia</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/">About <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/mythbusters">Mythbusters</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/numbers">Case Count</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/vaccine">Vaccine Info</a>
-          </li>
-        
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-  <div class="text-center">
-    
-    <div class="jumbotron">
-        
-      <h1 class="display-2 font-weight-bold" >CovidPedia</h1>
-  </div>
-      <p class="font-weight-bolder font-size:100px"><b>The perfect answer to all your covid related questions</b></p>
-      
-    
-  </div>
-
-  <h2 class="aware display-6 font-weight-bold text-center bg-dark aware-light text-muted ">AWARENESS</h2>
-<!-- The grid: four columns -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 ccol-sm-12 col-md-6 col-lg-4">
-      <div class="stability">
-        <img src="PostrerEnglishtraveller_page-0001.png" alt="Nature" onclick="myFunction(this);">
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="stability">
-        <img src="ProtectivemeasuresEng_page-0001.png" alt="Snow" onclick="myFunction(this);">
-    </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="stability">
-        <img src="FINAL_14_03_2020_ENg_page-0001.png" alt="Mountains" onclick="myFunction(this);">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="stability">
-        <img src="socialdistancingEnglish_page-0001.png" alt="Lights" onclick="myFunction(this);">
-      </div>
-    </div>
-  </div> 
-<!-- The expanding image container -->
-<div class="container">
-  <!-- Close the image -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
-  <!-- Expanded image -->
-  <img id="expandedImg" style="width:100%">
-
-  <!-- Image text -->
-  <div id="imgtext"></div>
-</div>
-
-<!--Sliding images-->
-<h2 class="aware display-6 font-weight-bold text-center bg-dark text-muted ">Mythbusters</h2>
-<div class="w3-content w3-display-container">
-  <div style="height: 210px; overflow: auto;">
-     <% myth.forEach(ele=>{ %>
-      <div class="card d-inline" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"> <%= ele.heading %></h5>
-          <p class="card-text"> <%= ele.content %></p>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="COV.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">CovidPedia</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="/news">News</a>
+          <a class="nav-item nav-link" href="/mythbusters">MythBusters</a>
+          <a class="nav-item nav-link" href="/numbers">Covid19 Cases</a>
+          <a class="nav-item nav-link" href="/prevention">Prevention Techniques</a>
+          <a class="nav-item nav-link" href="/vaccine">Vaccine</a>
         </div>
       </div>
-    <% }) %>
-  </div>
-  </div>
-  
-</div>
-
-  
-
-<script>
-  /* var slideIndex = 1;
-  showDivs(slideIndex);
-  
-  function plusDivs(n) {
-    showDivs(slideIndex += n); 
-  }*/
-  
-  
-  
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    x[slideIndex-1].style.display = "block";  
-  }
-  </script>
-
-<div class="container1">
-  <div class="row1">
-    <div class="col">
-     <h2> Symptoms:</h2>
-     </div>
-    
-  </div>
-  <div class="row1">
-    <div class="col1">
-      <h3> Precautions:</h3>
-      fgregrgdrfgdd
-      vrfvfv
-      fvfbfb
-
+    </nav>
+    <div class="jumbotron text-center">
+      <h1 class="display-4">CovidPedia</h1>
+      <p class="lead">Your Covid - 19 Encyclopedia</p>
+      <hr class="my-4">
+      <p>A Perfect Answers For All Your Covid-19 Related Queries</p>
     </div>
-    <div class="col2" >
-      <h2> Preventions:</h2>
-      <% prevent.forEach(ele=>{ %>
-        <div class="card d-inline" style="width: 18rem;">
-          <div class="card-body">
-            <p class="card-text"> <%=ele%></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-md-6 col-lg-4">
+          <div class="stability">
+            <img src="https://www.un.org/sites/un2.un.org/files/be_kind_to_address_stigma.jpg" class="thumbnail img-fluid">
           </div>
         </div>
-      <% }) %>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="stability">
+            <img src="https://www.un.org/sites/un2.un.org/files/be_smart_if_you_develop.jpg" class="thumbnail img-fluid">
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="stability">
+            <img src="https://www.un.org/sites/un2.un.org/files/be_safe.jpg" class="thumbnail img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 col-md-6 col-lg-4">
+          <div class="stability">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/1200px-Question_mark_%28black%29.svg.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Why MythBusters</h5>
+                <p class="card-text">It causes contraction and then prejudices, then bigotry, and eventually violence.</p>
+                <a href="/mythbusters" class="btn btn-primary">Let's Break Some Myths</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="stability">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://scitechdaily.com/images/COVID-19-Coronavirus-Vaccine.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Vaccine Updates</h5>
+                <p class="card-text">Lets Be Updated with the growing need of vaccine for Covid-19</p>
+                <a href="#" class="btn btn-primary">Explore</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="stability">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  
-  </div>
-</div>
-</body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

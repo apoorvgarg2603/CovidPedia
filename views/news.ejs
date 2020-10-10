@@ -1,21 +1,58 @@
-<div class="ui main text container">
-    <div class="ui hude header">CP:News</div>
-    <div class="iu top attached segment">
-        <div class="ui divided items">
-            <% news.forEach(function(news){ %>
-                <div class="item">
+<html>
+
+<head>
+    <title>News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">CovidPedia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/news">News</a>
+                <a class="nav-item nav-link" href="/mythbusters">MythBusters</a>
+                <a class="nav-item nav-link" href="/numbers">Covid19 Cases</a>
+                <a class="nav-item nav-link" href="/prevention">Prevention Techniques</a>
+                <a class="nav-item nav-link" href="/vaccine">Vaccine</a>
+            </div>
+        </div>
+    </nav>
+    <div class="ui main text container">
+    
+        <div class="iu top attached segment my-5">
+            <div class="ui divided items row">
+                <% news.forEach(function(news){ %>
+                <div class="item col-lg-4 my-4"> 
                     <div class="image">
-                        <img src="<%=news.image%>" alt="Sorry Image Not Found">
+                        <img src="<%=news.image%>" alt="Sorry Image Not Found" height="200px" width="250px">
                     </div>
-                    <div class="content">
-                        <a href="<%=news.newslink%>"><%=news.title %></a>
+                    <div class="content my-1">
                         <div class="meta">
-                            <span><%= news.date%></span>
+                            <span><%= news.date %></span>
                         </div>
+                        <a href="<%=news.newslink%>" target="_blank"><%=news.title %></a>
                     </div>
                 </div>
-                
-            <%});%>
+
+                <%});%>
+            </div>
         </div>
     </div>
-</div> 
+</body>

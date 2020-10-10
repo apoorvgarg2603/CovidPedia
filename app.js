@@ -33,7 +33,8 @@ function ScrapNews() {
                 let newsImageLink = []
                 $('.background-image').each((index, element) => {
                     var link = $(element).attr('data-image');
-                    link = "who.int" + link;
+                    link = "https://who.int" + link;
+                    link =link.split('?')[0]
                     newsImageLink.push(link);
                 });
                 let newsLink = []
