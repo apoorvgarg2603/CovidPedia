@@ -175,7 +175,6 @@ mythScrapping()
 ScrapNews()
 
 app.get('/', function(request, response){
-    //console.log(myths);
      response.render("CovidPedia", {news : news, myth : myths, prevent : preventions});
 });
 app.get('/mythbusters', function(request, response){
