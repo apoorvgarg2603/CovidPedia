@@ -28,10 +28,8 @@
           </div>
         </div>
       </nav>
+      <h3>Statewise current Covid-19 cases.</h3>
     <div class="container my-5">
-        <div class="container">
-            <h3>Statewise current Covid-19 cases.</h3>
-        </div>
         <table class="table table-striped">
             <thead>
                 <th>State</th>
@@ -42,10 +40,10 @@
             <tbody>
                
                 <% num.forEach((ele)=> { %>
-                <tr>
+                <tr style="font-weight: 500;">
                     <td><%= ele.statename %></td>
-                    <td><%= ele.confirmed %></td> 
-                    <td><%= ele.recovered %></td>
+                    <td style="color: red;"><%= ele.confirmed %></td> 
+                    <td style="color: green;"><%= ele.recovered %></td>
                     <td><%= ele.death %></td>
                 </tr>
                 <% }) %>
