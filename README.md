@@ -35,3 +35,7 @@
 * Text Editor - VS-Code
 
 <a href="https://covidpedia.herokuapp.com/">Website</a>
+
+<video width="320" height="240" autoplay>
+ <source src="https://youtu.be/z8yF454aTik" type="video/mp4">
+</video> 
