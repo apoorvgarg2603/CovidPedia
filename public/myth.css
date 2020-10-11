@@ -1,0 +1,14 @@
+.jumbotron
+{
+    
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF-JaFObHX7pWNWnD3VioAqnsGlOkZIpxT1g&usqp=CAU");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+h3
+{
+    width: 10rem;
+    background-color: rgb(29, 28, 25);
+    color: rgb(239, 248, 248);
+}

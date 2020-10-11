@@ -1,0 +1,22 @@
+h3
+{
+    text-align: center;
+    text-shadow: unset;
+}
+.container
+{
+    background-color:rgb(76, 79, 101);
+    text-align: center;
+
+}
+ol
+{
+    background-color:rgb(76, 79, 101);
+    border-width: thick;
+    border: aqua;
+    color: rgb(255, 255, 255);
+}
+body
+{
+    background-color:rgb(76, 79, 101);  
+}

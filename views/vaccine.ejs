@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   ---- <link rel="stylesheet" href="vacc.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -29,7 +31,7 @@
       </nav>
     <div class="container">
         <div class="container">
-            <h2>Vaccine Stages</h2>
+            <h2><b>Vaccine Stages :-</b></h2>
         </div>
         <table class="table table-striped">
             <thead>
@@ -57,12 +59,18 @@
     </div>
     <div class="container">
         <h3><%= test %></h3>
+        <br>
     </div>
 
+    <h5>List of Vaccines under Trial:</h5>
+    
     <div class="container">
+        <ul>
+          
         <% prec.forEach((element) =>{ %>
-            <h4><%= element%></h4>
-       <% }) %>
+            <li> <h4><%= element%></h4> </li> 
+       <% }) %>   
+        </ul>
     </div>
 </body>
 </html>
