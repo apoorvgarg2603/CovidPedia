@@ -32,3 +32,4 @@
 
 * Backend ( Node js , Cheerio , Express , Javascript , Request )
 * Frontend ( HTML , CSS)
+* Text Editor - VS-Code
