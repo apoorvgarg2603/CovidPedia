@@ -195,4 +195,4 @@ app.get('/news', function(request, response){
 app.get('/vaccine', function(request, response){
     response.render("vaccine", {stage : vaccine, prec : vaccinesPrecedence, test : howVaccTested})
 });
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
